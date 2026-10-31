@@ -1,0 +1,30 @@
+
+
+{
+  "name": "plinko_sim",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A Plinko simulator which I am building to understand the logic and maths behind a game that looks like pure luck",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BLAYZE778/PLINKO_SIM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BLAYZE778/PLINKO_SIM/issues"
+  },
+  "homepage": "https://github.com/BLAYZE778/PLINKO_SIM#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
