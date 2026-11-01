@@ -12,6 +12,8 @@ Row 4:   1   4   6   4   1
 
 then we find out that every slot no depends of the no of rights.
 
+![Handwritten working for n = 3: all 8 paths grouped by number of rights, forming Pascal's triangle](pascal.jpg)
+
 # SLOT PROBABILITY :
 **P(k) = nCk/2^n**
 k=slot no/no of rights
