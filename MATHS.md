@@ -18,7 +18,7 @@ k=slot no/no of rights
 
 # Distance from centre : 
 because of the symmetry we start from middle.
-X = (|k-n/2|)(n/2);
+X = (|k-n/2|)/(n/2);
 k = distance from centre;
 
 (why did we normalize ? if we dont then it will depend on the no. of n if we have n=10 or n=100 it will have diff values and it becomes difficult for us to map it out, hence the normalisation)
