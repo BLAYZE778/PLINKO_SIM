@@ -16,7 +16,7 @@ then we find out that every slot no depends of the no of rights.
 **P(k) = nCk/2^n**
 k=slot no/no of rights
 
-# Calculating raw weight : 
+# Distance from centre : 
 because of the symmetry we start from middle.
 X = (|k-n/2|)(n/2);
 k = distance from centre;
