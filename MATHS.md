@@ -37,3 +37,36 @@ We get a symmetrical curve which mimicks the iconic **BELL CURVE** which gives a
 s = controls the steepness of the curve, if s = 0 then we get same payout in each slot(which we dont want!)
 x = normalized distance we used above;
 p = controls the sharpness of the curve, increasing p makes the curve flat near the centre and hence even payout;
+
+# RTP (return to player) :
+raw weights are just *shapes*, they are not payouts yet. if we directly use them as multipliers the house could be losing money (or taking too much), so we need to **scale** them so that the game pays back exactly what we want in the long run.
+ 
+**RTP = Σ P(k) · m(k)**
+m(k) = final multiplier of slot k
+P(k) = nCk/2^n (the probability from above)
+it is just the EXPECTED VALUE of the multiplier = (chance of landing) × (what it pays), added over all slots.
+ 
+if RTP = 0.96 then for every ₹1 bet we get back ₹0.96 on average, and the house edge = 1 - RTP = 4%
+ 
+## Scaling :
+we want multiplier to keep the shape of raw (edges high, centre low) so we just multiply every raw by a constant c :
+ 
+**m(k) = c · raw(k)**
+ 
+put this in the RTP formula :
+RTP = Σ P(k) · c · raw(k) = c · Σ P(k) · raw(k)    (c is constant so it comes out of the sum)
+ 
+hence,
+ 
+**c = RTP / Σ P(k) · raw(k)**
+ 
+so the steps are :
+1. find x for every slot
+2. raw(k) = e^(s.x^p)
+3. find Σ P(k) · raw(k)
+4. c = target RTP / that sum
+5. m(k) = c · raw(k)
+
+# example :
+the centre might pay 0.36x (you LOSE most of the time there) and the edges might pay 2.67x but are super rare, that is the bell curve and the casino working together :)
+ 
