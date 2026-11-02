@@ -48,6 +48,12 @@ it is just the EXPECTED VALUE of the multiplier = (chance of landing) × (what i
  
 if RTP = 0.96 then for every ₹1 bet we get back ₹0.96 on average, and the house edge = 1 - RTP = 4%
  
+## Hit frequency
+chance that the player gets back at least their bet :
+ 
+**hit = Σ P(k) for all slots where m(k) ≥ 1**
+ 
+for the n = 4 example above only the two edges pay ≥ 1x (the 0.98x slots dont count), so hit = 2/16 = 12.5%.
 ## Scaling :
 we want multiplier to keep the shape of raw (edges high, centre low) so we just multiply every raw by a constant c :
  
