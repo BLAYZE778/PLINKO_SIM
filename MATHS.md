@@ -69,4 +69,7 @@ so the steps are :
 
 # example :
 the centre might pay 0.36x (you LOSE most of the time there) and the edges might pay 2.67x but are super rare, that is the bell curve and the casino working together :)
- 
+
+# 7. RISK LEVELS (low / medium / high)
+the "risk" button in a Plinko game is nothing but a different **s** (and/or q) with the SAME RTP. bigger s = edges pay MUCH more, centre pays MUCH less.
+![bell curve](BELL.png)
