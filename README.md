@@ -8,3 +8,4 @@ The first time I saw this game was when Samay was playing it (I used to follow h
 
 **Day 2:** writing and understanding the maths behind it with pen and paper!, committing and pushing the documentation on git hub
 
+**Day 3:** wrote probability.js and calculate.js code 
