@@ -2,7 +2,7 @@ export const max_row = 30;
 
 function isvalid(n){
     if(!Number.isInteger(n)||n<0||n>max_row){
-        throw new RangeError(`rows must be an integer from 0 to ${MAX_ROWS_EXACT}, got ${n}`);
+        throw new RangeError(`rows must be an integer from 0 to ${max_row}, got ${n}`);
     }
 }
 export function pascal(n){

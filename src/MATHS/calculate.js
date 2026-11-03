@@ -1,4 +1,4 @@
-import { slotprob } from "./prob";
+import { slotprob } from "./prob.js";
 export const min_r = 8;
 export const max_r = 16;
 export const risks = ['low','medium','high'];
@@ -24,9 +24,9 @@ export const optimal_RTP = 0.99;
     const {steepness, sharpness} = curves[risk];
     const w = [];
     for(let k=0; k<=rows; k++){
-        w.push(Math.exp(steepness*distFromCentre(rows,k)**sharpness));
-        return w;
+      w.push(Math.exp(steepness*distFromCentre(rows,k)**sharpness));
     }
+    return w;
  }
  export function roundMul(m){
     if(m>=100) return Math.round(m);
@@ -76,7 +76,7 @@ export const optimal_RTP = 0.99;
 
   const rtp = computeRTP(rows, multipliers);
 
-  const volatility = volatility(rows, multipliers);
+  const volt = volatility(rows, multipliers);
 
   const hitRate = HitRate(rows, multipliers);
 
@@ -85,7 +85,7 @@ export const optimal_RTP = 0.99;
     risk,
     multipliers,
     rtp,
-    volatility,
+    volatility: volt,
     hitRate
   };
  }
