@@ -1,12 +1,9 @@
-
-
 {
   "name": "plinko_sim",
   "type": "module",
   "version": "1.0.0",
   "description": "A Plinko simulator which I am building to understand the logic and maths behind a game that looks like pure luck",
-
-  "scripts": { "test": "node --test" },
+  "scripts": { "start": "node api/server.js", "test": "node --test" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BLAYZE778/PLINKO_SIM.git"
@@ -23,5 +20,8 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
   }
 }

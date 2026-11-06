@@ -1,5 +1,3 @@
-// api/route.js  (basic version)
-// The HTTP layer: read the request, call game.js, send JSON. No maths or money rules here.
 
 import express from 'express';
 import { fileURLToPath } from 'node:url';
@@ -50,7 +48,7 @@ app.use('/api', (_req, res) => {
   res.status(404).json({ error: 'NOT_FOUND' });
 });
 
-app.use((err, _req, res, _next) => {             // four parameters = Express error handler
+app.use((err, _req, res, _next) => { 
   if (err instanceof GameError) return res.status(400).json({ error: err.code });
   if (err.status >= 400 && err.status < 500) return res.status(err.status).json({ error: 'INVALID_INPUT' });
   console.error(err);
