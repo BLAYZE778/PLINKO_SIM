@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plinko</title>
+<link rel="stylesheet" href="style.css">
+</head><body><main>
+<header><h1>PLINKO</h1><div class="bal"><span class="note">Balance (play credits)</span> <b id="bal">0.00</b></div></header>
+
+<div class="game">
+ <div class="ctl">
+  <label>Bet amount</label>
+  <div class="row"><input id="amt" type="number" min="0.01" step="0.01" value="1.00"><button class="qb" id="half">½</button><button class="qb" id="dbl">2×</button><button class="qb" id="max">Max</button></div>
+  <div class="row"><div><label>Rows</label><select id="rows"></select></div><div><label>Risk</label><select id="risk"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select></div></div>
+  <button class="go" id="bet">Bet</button>
+  <label>Auto bet: number of bets (0 = unlimited)</label>
+  <input id="cnt" type="number" min="0" step="1" value="10">
+  <button class="sec" id="auto">Start auto</button>
+  <div class="msg" id="msg"></div>
+  <div class="note">Play credits only. No real money.</div>
+ </div>
+ <div class="stage"><canvas id="cv"></canvas><div class="chips" id="hist"></div></div>
+</div>
+
+<div class="card"><h2>Session</h2><div class="stats" id="stats"></div>
+ <button class="sec" id="reset" style="max-width:200px">Reset balance and stats</button></div>
+
+<div class="card"><h2>Fairness (provably fair)</h2>
+ <label>Server seed hash (committed before you bet)</label><div class="mono" id="commit"></div>
+ <label>Client seed</label><input id="cs" value="player" maxlength="64">
+ <div class="row" style="margin-top:8px;align-items:center"><div class="note">Next nonce: <b id="nonce">0</b></div><button class="sec" id="rot" style="margin:0">Rotate server seed (reveals the old one)</button></div>
+ <div class="mono" id="revealed" style="margin-top:8px"></div>
+ <div class="mono" id="lastbet" style="margin-top:6px"></div>
+ <p class="note">Each bet’s moves are the first n bits of SHA-256(serverSeed:clientSeed:nonce): 0 is left, 1 is right. Rotate the seed, then verify any past bet with <code>node scripts/verify.js</code>.</p></div>
+</main>
+<script src="app.js"></script>
+</body></html>
