@@ -96,7 +96,6 @@ export const optimal_RTP = 0.99;
   if (typeof m !== 'number' || !(m >= 0)) {
     throw new RangeError(`multiplier must be a number >= 0, got ${m}`);
   }
-  const hundredths = Math.round(m * 100); 
-  const product = betamt * hundredths;
-  return (product - (product % 100)) / 100;
+  const hundredths = Math.round(m * 100);
+  return Math.floor((betamt * hundredths) / 100);
 }
