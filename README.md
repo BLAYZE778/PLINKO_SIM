@@ -20,7 +20,7 @@ The first time I saw this game was when Samay was playing it (I used to follow h
 - wallet is not stored in database and lives in memory so restarting esrases the previous wallet.
 
 ## PROGRESS
-**1** Setting up the project and understanding the maths behind it, learning basics of node js and typescript
+**1**  Setting up the project and understanding the maths behind it, learning basics of node js and typescript
 
 **2** writing and understanding the maths behind it with pen and paper!, committing and pushing the documentation on git hub
 
@@ -38,7 +38,7 @@ The first time I saw this game was when Samay was playing it (I used to follow h
 
 ## Whats next !?
 i would like to explore this project further like 
-**1** implementing the provably fair logic 
-**2** how to store the player sessions
-**3** making it multiplayer 
-**4** experimentally demonstrate that my implementation behaves according to the theoretical model over a large no of simulation (like a million drops)
+- implementing the provably fair logic 
+- how to store the player sessions
+- making it multiplayer 
+- experimentally demonstrate that my implementation behaves according to the theoretical model over a large no of simulation (like a million drops)
