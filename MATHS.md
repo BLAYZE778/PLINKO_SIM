@@ -12,7 +12,7 @@ Row 4:   1   4   6   4   1
 
 then we find out that every slot no depends of the no of rights.
 
-![Handwritten working for n = 3: all 8 paths grouped by number of rights, forming Pascal's triangle](pascal.jpg)
+![Handwritten working for n = 3: all 8 paths grouped by number of rights, forming Pascal's triangle](images/pascal.jpg)
 
 # SLOT PROBABILITY :
 **P(k) = nCk/2^n**
@@ -78,4 +78,10 @@ the centre might pay 0.36x (you LOSE most of the time there) and the edges might
 
 # 7. RISK LEVELS (low / medium / high)
 the "risk" button in a Plinko game is nothing but a different **s** (and/or q) with the SAME RTP. bigger s = edges pay MUCH more, centre pays MUCH less.
-![bell curve](BELL.png)
+![bell curve](images/BELL.png)
+
+## Payout modelling (my handwritten working)
+
+![Page 1: Pascal row, slot probabilities, distance from centre, raw weights](images/payout1.jpg)
+![Page 2: scaling to 99% RTP and the drop function design](images/payout2.jpg)
+![Page 3: calcDrop worked example, payout and wallet](images/payout3.jpg)
