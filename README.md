@@ -9,6 +9,8 @@ The first time I saw this game was when Samay was playing it (I used to follow h
 
 ## What it does
 - The **server owns the maths**: slot probabilities come from Pascal's triangle, multipliers are scaled so the average return is 99%, and every payout is computed in whole cents.
+- A probability model for landing positions.
+- risk-dependent(low medium high) payout model targeting a specified RTP.
 - The **browser only draws**: it animates the path the server sends back.
 - **Play credits only**, no real money.
 - Every maths function has tests; I derived the maths on paper first (see [MATHS.md](MATHS.md)).
@@ -33,3 +35,10 @@ The first time I saw this game was when Samay was playing it (I used to follow h
 **7** understanding how api and routing works and connecting frontend with backend (server.js and route.js)
 
 **8** Deploying it on render (free web service)
+
+## Whats next !?
+i would like to explore this project further like 
+**1** implementing the provably fair logic 
+**2** how to store the player sessions
+**3** making it multiplayer 
+**4** experimentally demonstrate that my implementation behaves according to the theoretical model over a large no of simulation (like a million drops)
